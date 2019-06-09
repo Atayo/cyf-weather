@@ -12,9 +12,12 @@ class App extends Component {
   render () {
     return (
       <div className="app">
+        <img src="
+        https://placekitten.com/100/150"></img>
         <header className="app__header">
+          Temperature<br></br>
+          Humidity Pressure
         </header>
-      Tayo
         <main className="app__main">
         </main>
       </div>
