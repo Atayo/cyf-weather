@@ -14,6 +14,7 @@ class App extends Component {
       <div className="app">
         <header className="app__header">
         </header>
+      Tayo
         <main className="app__main">
         </main>
       </div>
