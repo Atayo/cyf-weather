@@ -30,9 +30,8 @@
 
 /*  Search bar */
 .submit_button{
-  color: #00008b;
     border: 1px solid #06f;
-    background-color: blue;
+    background-color: rgb(5, 101, 226);
     padding: 10px 30px;
     margin: 15px;
     position: relative;
@@ -51,6 +50,9 @@
 }
 .text:hover {
   border-bottom: 1px solid lightskyblue;
+}
+::placeholder {
+  color: white;
 }
 
 
