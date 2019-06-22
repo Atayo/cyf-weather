@@ -8,18 +8,20 @@ import Forecast from './Forecast';
 //import rain from "./img/weather-icons/rain.svg";
 //import snow from "./img/weather-icons/snow.svg";
 
-function CurrentWeather() {
+import { apiWeatherNameToSvgImport } from "./App"
+
+function CurrentWeather(props) {
     return (
         <div>
-            <img src={mostlycloudy} height="200" width="200" alt="overcast clouds" />
-            <h3 className="weatherTitle">overcast clouds</h3>
+            <img src={apiWeatherNameToSvgImport(props.weather.weather[0].main)} height="200" width="200" alt={props.weather.weather[0].description} />
+            <h3 className="weatherTitle">{props.weather.weather[0].description}</h3>
             <section className="flex-container1">
                 <p className="temperature">
-                    <b>Temperature</b>&nbsp;&nbsp;&nbsp;10° to 11&#8451;
+                    <b>Temperature</b>&nbsp;&nbsp;&nbsp;{props.weather.main.temp_min}° to {props.weather.main.temp_max}°
                 </p>
                 <p className="temperatureInfo">
-                    <b>Humidity</b>&nbsp;78%&nbsp;
-                    <b>Pressure</b>&nbsp;100848
+                    <b>Humidity</b>&nbsp;{props.weather.main.humidity}%&nbsp;
+                    <b>Pressure</b>&nbsp;{props.weather.main.pressure}
                 </p>
             </section>
         </div>
